@@ -8,13 +8,11 @@ players = {1: 0, 2: 0, 3: 0}
 def dice():
     return random.randint(1, 6)
 
-
 def move_ladders(position):
     for bottom, top in ladders.items():
         if position == bottom:
             return top
     return position
-
 
 def move_snakes(position):
     for head, tail in snakes.items():
@@ -22,11 +20,9 @@ def move_snakes(position):
             return tail
     return position
 
-
 def move(position, i):
     position += i
     return position
-
 
 def win(position):
     if position >= 36:
